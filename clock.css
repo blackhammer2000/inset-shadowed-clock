@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock{
+    width: 500px;
+    height: 500px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    border-radius: 50%;
+    border: .5px solid white;
+    animation: bordercolor 8s  infinite;
+    transition: animation 1s ease-in-out;
+}
+
+.clock .number{
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    animation: colour 8s  infinite;
+    transition: animation 1s ease-in-out;
+}
+
+.clock .number1{ --rotation: 30deg;}
+.clock .number2{--rotation: 60deg;}
+.clock .number3{--rotation: 90deg;}
+.clock .number4{--rotation: 120deg;}
+.clock .number5{--rotation: 150deg;}
+.clock .number6{--rotation: 180deg;}
+.clock .number7{--rotation: 210deg;}
+.clock .number8{--rotation: 240deg;}
+.clock .number9{--rotation: 270deg;}
+.clock .number10{--rotation: 300deg;}
+.clock .number11{--rotation: 330deg;}
+
+
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: #000;
+    border: 1px solid #fff;
+    z-index: 11;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: bordercolor 8s  infinite;
+    transition: animation 1s ease-in-out;
+}
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    animation: bordercolor 8s  infinite;
+    transition: animation 1s ease-in-out;
+}
+
+.clock .hand.second{
+    width: 1px;
+    height: 45%;
+    background-color: #fff;
+}
+
+.clock .hand.minute{
+    width: 6px;
+    height: 40%;
+    background-color: #000;
+    border: 1px solid #fff;
+}
+.clock .hand.hour{
+    width: 9px;
+    height: 33%;
+    background-color: #000;
+    border: 1px solid #fff;
+
+}
+@keyframes bordercolor {
+    0%{border-color: aliceblue;}
+    20%{border-color: aqua;}
+    40%{border-color: cadetblue;}
+    60%{border-color: crimson;}
+    80%{border-color: darkgreen;}
+    100%{border-color: aliceblue;}
+}
+@keyframes colour {
+    0%{color: aliceblue;}
+    20%{color: aqua;}
+    40%{color: cadetblue;}
+    60%{color: crimson;}
+    80%{color: darkgreen;}
+    100%{color: aliceblue;}
+}
