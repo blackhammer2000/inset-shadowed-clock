@@ -61,7 +61,6 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    animation: bordercolor 8s  infinite;
     transition: animation 1s ease-in-out;
 }
 
@@ -76,7 +75,6 @@ body{
     transform-origin: bottom;
     z-index: 10;
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
-    animation: bordercolor 8s  infinite;
     transition: animation 1s ease-in-out;
 }
 
@@ -98,20 +96,4 @@ body{
     background-color: #000;
     border: 1px solid #fff;
 
-}
-@keyframes bordercolor {
-    0%{border-color: aliceblue;}
-    20%{border-color: aqua;}
-    40%{border-color: cadetblue;}
-    60%{border-color: crimson;}
-    80%{border-color: darkgreen;}
-    100%{border-color: aliceblue;}
-}
-@keyframes colour {
-    0%{color: aliceblue;}
-    20%{color: aqua;}
-    40%{color: cadetblue;}
-    60%{color: crimson;}
-    80%{color: darkgreen;}
-    100%{color: aliceblue;}
 }
