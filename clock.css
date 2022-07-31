@@ -23,7 +23,7 @@ body {
   border: 2px solid white;
   animation: bordercolor 8s infinite;
   transition: animation 1s ease-in-out;
-  box-shadow: inset 0 0 15px cyan;
+  box-shadow: 0 0 0 3px cyan, inset 0 0 15px cyan;
 }
 
 .clock .number {
